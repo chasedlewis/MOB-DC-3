@@ -29,12 +29,13 @@
                         <viewControllerLayoutGuide type="bottom" id="F4o-2t-AYd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oem-E1-aCO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chase_lewis.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="8SX-Yd-Xvc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="52" y="81" width="297" height="297"/>
+                                    <rect key="frame" x="52" y="64" width="297" height="297"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7th-4v-fJv">
@@ -45,7 +46,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="452" width="200" height="45"/>
+                                    <rect key="frame" x="100" y="420" width="200" height="45"/>
                                 </variation>
                                 <connections>
                                     <segue destination="IAa-Fr-TVc" kind="show" id="lnu-fD-58T"/>
@@ -59,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="511" width="200" height="45"/>
+                                    <rect key="frame" x="100" y="479" width="200" height="45"/>
                                 </variation>
                                 <connections>
                                     <segue destination="lqJ-Nv-JjC" kind="show" id="rqg-XI-ONi"/>
@@ -73,7 +74,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="569" width="200" height="45"/>
+                                    <rect key="frame" x="100" y="537" width="200" height="45"/>
                                 </variation>
                                 <connections>
                                     <segue destination="TZD-Hx-1e0" kind="show" id="Seb-XV-SMz"/>
@@ -85,9 +86,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="69" y="386" width="262" height="57"/>
+                                    <rect key="frame" x="69" y="354" width="262" height="57"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLy-7E-OSP">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="78" y="604" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SXI-rK-ubd">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="224" y="604" width="97" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -97,6 +114,8 @@
                                 <exclude reference="Uq0-l4-nY5"/>
                                 <exclude reference="DRL-17-CzT"/>
                                 <exclude reference="ZbP-kx-6Xk"/>
+                                <exclude reference="rLy-7E-OSP"/>
+                                <exclude reference="SXI-rK-ubd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -106,6 +125,8 @@
                                 <include reference="Uq0-l4-nY5"/>
                                 <include reference="DRL-17-CzT"/>
                                 <include reference="ZbP-kx-6Xk"/>
+                                <include reference="rLy-7E-OSP"/>
+                                <include reference="SXI-rK-ubd"/>
                             </mask>
                         </variation>
                     </view>
@@ -124,6 +145,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ovs-jt-HX8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="epI-OZ-OhS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photography" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsx-0S-cbl">
@@ -162,6 +184,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AAn-yH-TDy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JCU-lu-dgI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepperdine University" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKC-7M-VxN">
@@ -200,6 +223,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3CO-Ko-Ebo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rJR-GD-2q4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am from Columbia, Maryland" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62S-nX-lnc">
