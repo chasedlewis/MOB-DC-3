@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../../Desktop/Other/chase_lewis.JPG">
-   </FileRef>
-   <FileRef
       location = "self:BioApp.xcodeproj">
    </FileRef>
 </Workspace>

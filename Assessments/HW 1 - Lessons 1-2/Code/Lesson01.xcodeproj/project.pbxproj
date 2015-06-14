@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E8ACDEA1B2A26A500D4F1EE /* chase_lewis.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4E8ACDE91B2A26A500D4F1EE /* chase_lewis.JPG */; };
 		5D06C67D19D8CFFE0082F2DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */; };
 		5D06C67F19D8CFFE0082F2DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C67E19D8CFFE0082F2DE /* ViewController.swift */; };
 		5D06C68219D8CFFE0082F2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D06C68019D8CFFE0082F2DE /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E8ACDE91B2A26A500D4F1EE /* chase_lewis.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chase_lewis.JPG; sourceTree = "<group>"; };
 		5D06C67719D8CFFE0082F2DE /* Lesson01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D06C67B19D8CFFE0082F2DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */,
 				5D06C67E19D8CFFE0082F2DE /* ViewController.swift */,
 				5D06C68019D8CFFE0082F2DE /* Main.storyboard */,
+				4E8ACDE91B2A26A500D4F1EE /* chase_lewis.JPG */,
 				5D06C68319D8CFFE0082F2DE /* Images.xcassets */,
 				5D06C67A19D8CFFE0082F2DE /* Supporting Files */,
 			);
@@ -191,6 +194,7 @@
 			files = (
 				5D06C68219D8CFFE0082F2DE /* Main.storyboard in Resources */,
 				5D06C68419D8CFFE0082F2DE /* Images.xcassets in Resources */,
+				4E8ACDEA1B2A26A500D4F1EE /* chase_lewis.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +397,7 @@
 				5D06C69819D8CFFE0082F2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D06C69919D8CFFE0082F2DE /* Build configuration list for PBXNativeTarget "Lesson01Tests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +406,7 @@
 				5D06C69B19D8CFFE0082F2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
