@@ -240,16 +240,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vT-rs-NaY">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <string key="text">My goal for this class is to learn and realistically apply the skills necessary to create the many mobile application ideas that I have thought of. If I could have an app that is ready, or even almost ready, to be added to the app store, I will consider this class a success. As a person who is relatively new to the programming world, I would also like to be able to have the confidence to hold a conversation about progamming and know exactly what I am talking about.</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" red="0.93333339691162109" green="0.52549022436141968" blue="0.53333336114883423" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="47" y="81" width="296" height="352"/>
-                                </variation>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-CK-xMY">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -268,22 +258,32 @@
                                     <rect key="frame" x="51" y="546" width="142" height="103"/>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vT-rs-NaY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <string key="text">My goal for this class is to learn and realistically apply the skills necessary to create the many mobile application ideas that I have thought of. If I could have an app that is ready, or even almost ready, to be added to the app store, I will consider this class a success. As a person who is relatively new to the programming world, I would also like to be able to have the confidence to hold a conversation about progamming and know exactly what I am talking about.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.93333339691162109" green="0.52549022436141968" blue="0.53333336114883423" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="97" y="110" width="296" height="352"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="0vT-rs-NaY"/>
                                 <exclude reference="fjO-CK-xMY"/>
                                 <exclude reference="2MJ-DZ-kNK"/>
                                 <exclude reference="QqZ-bW-faQ"/>
+                                <exclude reference="0vT-rs-NaY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="0vT-rs-NaY"/>
                                 <include reference="fjO-CK-xMY"/>
                                 <include reference="2MJ-DZ-kNK"/>
                                 <include reference="QqZ-bW-faQ"/>
+                                <include reference="0vT-rs-NaY"/>
                             </mask>
                         </variation>
                     </view>
@@ -330,6 +330,6 @@
         <image name="sushi1.jpg" width="550" height="366"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vnU-fB-kCl"/>
+        <segue reference="GrJ-VU-FQS"/>
     </inferredMetricsTieBreakers>
 </document>
