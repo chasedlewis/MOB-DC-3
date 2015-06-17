@@ -4,7 +4,7 @@ import Foundation
 
 // TODO: Create two variables, name and age. Name is a string, age is an integer.
 var name = "Thomas"
-var age = 23
+var age = 24
 
 var name: String = "Chase"
 var age: Int  = 18
@@ -87,6 +87,7 @@ if calledNumber % 2 == 0 {
     println("Called number is not even")
 }
 
+<<<<<<< HEAD
 if number%2 == 0 {
     println("\(number) is even")
 } else {
@@ -94,13 +95,16 @@ if number%2 == 0 {
 }
 
 // TODO: Print out "Hello {whatever the value of name is}, your name is {however long the string name is} characters long!. Use countElements()
+=======
+// TODO: Print out "Hello {whatever the value of name is}, your name is {however long the string name is} characters long!. Use count()
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
 let characters = count(name)
 println("Hello \(name), your name is \(characters) characters long")
 
 // TODO: Print the sum of one hundred random numbers. Use rand() to generate random numbers.
 var sum = 0
 for i in 0..<100 {
-    let randomNumber = Int(rand())
+    let randomNumber = Int(arc4random())
     sum += randomNumber
 }
 println("The sum is \(sum)")

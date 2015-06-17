@@ -3,74 +3,106 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1153&amp;EndingColumnNumber=19&amp;EndingLineNumber=22&amp;StartingColumnNumber=5&amp;StartingLineNumber=22&amp;Timestamp=449617207.123889"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2055&amp;EndingColumnNumber=19&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=455988370.571946"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2054&amp;EndingColumnNumber=19&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=456101244.443577"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1153&amp;EndingColumnNumber=33&amp;EndingLineNumber=22&amp;StartingColumnNumber=5&amp;StartingLineNumber=22&amp;Timestamp=449617207.125287"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2055&amp;EndingColumnNumber=33&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=455988370.572153"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2054&amp;EndingColumnNumber=33&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=456101244.443577"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1153&amp;EndingColumnNumber=11&amp;EndingLineNumber=22&amp;StartingColumnNumber=5&amp;StartingLineNumber=22&amp;Timestamp=449617207.125453"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2055&amp;EndingColumnNumber=11&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=455988370.572294"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2054&amp;EndingColumnNumber=11&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=456101244.443577"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1153&amp;EndingColumnNumber=32&amp;EndingLineNumber=22&amp;StartingColumnNumber=5&amp;StartingLineNumber=22&amp;Timestamp=449617207.125607"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2055&amp;EndingColumnNumber=32&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=455988370.572424"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2054&amp;EndingColumnNumber=32&amp;EndingLineNumber=54&amp;StartingColumnNumber=5&amp;StartingLineNumber=53&amp;Timestamp=456101244.443577"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=915&amp;EndingColumnNumber=20&amp;EndingLineNumber=19&amp;StartingColumnNumber=5&amp;StartingLineNumber=19&amp;Timestamp=449617207.125759"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=20&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=455988211.435161"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=20&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=456101112.440557"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=915&amp;EndingColumnNumber=40&amp;EndingLineNumber=19&amp;StartingColumnNumber=5&amp;StartingLineNumber=19&amp;Timestamp=449617207.125911"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=40&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=455988211.435161"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=40&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=456101112.440557"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=915&amp;EndingColumnNumber=40&amp;EndingLineNumber=19&amp;StartingColumnNumber=5&amp;StartingLineNumber=19&amp;Timestamp=449617207.126062"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=40&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=455988211.435161"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=40&amp;EndingLineNumber=41&amp;StartingColumnNumber=5&amp;StartingLineNumber=41&amp;Timestamp=456101112.440557"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1404&amp;EndingColumnNumber=29&amp;EndingLineNumber=24&amp;StartingColumnNumber=9&amp;StartingLineNumber=24&amp;Timestamp=449617207.126211"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2512&amp;EndingColumnNumber=29&amp;EndingLineNumber=59&amp;StartingColumnNumber=9&amp;StartingLineNumber=59&amp;Timestamp=455988526.06133"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2510&amp;EndingColumnNumber=29&amp;EndingLineNumber=60&amp;StartingColumnNumber=9&amp;StartingLineNumber=60&amp;Timestamp=456101347.082487"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
@@ -84,20 +116,28 @@
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=915&amp;EndingColumnNumber=21&amp;EndingLineNumber=19&amp;StartingColumnNumber=14&amp;StartingLineNumber=19&amp;Timestamp=449617207.126504"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=21&amp;EndingLineNumber=41&amp;StartingColumnNumber=14&amp;StartingLineNumber=41&amp;Timestamp=455988211.435161"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1598&amp;EndingColumnNumber=21&amp;EndingLineNumber=41&amp;StartingColumnNumber=14&amp;StartingLineNumber=41&amp;Timestamp=456101112.440557"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
 <<<<<<< HEAD:Lessons/Lesson 03/Lesson03.playground/timeline.xctimeline
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=1404&amp;EndingColumnNumber=31&amp;EndingLineNumber=24&amp;StartingColumnNumber=9&amp;StartingLineNumber=24&amp;Timestamp=449617207.12665"
 =======
          documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2512&amp;EndingColumnNumber=31&amp;EndingLineNumber=59&amp;StartingColumnNumber=9&amp;StartingLineNumber=59&amp;Timestamp=455988526.06133"
 >>>>>>> b247885fe9d63d408d2166ce104ce6499f0c13d8:Solutions/Lesson03/Lesson03.playground/timeline.xctimeline
+=======
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=2510&amp;EndingColumnNumber=31&amp;EndingLineNumber=60&amp;StartingColumnNumber=9&amp;StartingLineNumber=60&amp;Timestamp=456101347.082487"
+>>>>>>> 4d8852798393d8ad0cf0877c14963ee8d0db8d17
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
