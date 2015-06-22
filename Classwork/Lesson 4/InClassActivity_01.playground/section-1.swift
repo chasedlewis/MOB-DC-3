@@ -75,8 +75,8 @@ knockKnock()
 // Within the function we have a loop that runs x ammount of times that calls the knock knock function
 
 func knockMultipleTimes(times: Int) {
-    for x in 1...(times) {
-        println("Who is there?")
+    for i in 1...(times) {
+        knockKnock()
     }
 }
 
