@@ -16,16 +16,39 @@ class ProfileViewController: UIViewController
     var sex: String?
     var location: String?
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameField: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var ageField: UILabel!
+    @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var sexField: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        
         if let name = name {
             nameField.text = name
+            nameField.text.textcolor = gray
         }
+        
+        if let age = age {
+            ageField.text = age
+            
+        }
+        
+        if let sex = sex {
+            sexField.text = sex
+        }
+        
+        if let location = location {
+            locationField.text = location
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

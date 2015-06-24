@@ -54,6 +54,13 @@ class ViewController: UIViewController
         submitButton.setTitle("Submit", forState: UIControlState.Normal)
     }
     
+    @IBAction func clearAction(sender: AnyObject) {
+        nameField.text = ""
+        ageField.text = ""
+        sexField.text = ""
+        locationField.text = ""
+    }
+    
     @IBAction func submitAction(sender: UIButton) {
         
     }
