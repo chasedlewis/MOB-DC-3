@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController
         
         if let name = name {
             nameField.text = name
-            nameField.text.textcolor = gray
+            nameField.textColor = UIColor.blueColor()
         }
         
         if let age = age {
