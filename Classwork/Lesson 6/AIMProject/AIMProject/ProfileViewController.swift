@@ -38,15 +38,17 @@ class ProfileViewController: UIViewController
         
         if let age = age {
             ageField.text = age
-            
+            ageField.textColor = UIColor.blueColor()
         }
         
         if let sex = sex {
             sexField.text = sex
+            sexField.textColor = UIColor.blueColor()
         }
         
         if let location = location {
             locationField.text = location
+            locationField.textColor = UIColor.blueColor()
         }
         
     }
