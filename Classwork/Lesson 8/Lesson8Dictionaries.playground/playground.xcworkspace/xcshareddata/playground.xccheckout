@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>95B034B2-DE51-40F1-A085-CAB147F7C313</string>
+	<string>13D00753-4E33-493A-BA86-7103517347A9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Lesson02</string>
+	<string>playground</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
 		<string>https://github.com/chasedlewis/MOB-DC-3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Assessments/HW 2 - Lessons 3-5/Code/Lesson02.xcodeproj</string>
+	<string>Classwork/Lesson 8/Lesson8Dictionaries.playground/playground.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
-		<string>../../../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chasedlewis/MOB-DC-3.git</string>

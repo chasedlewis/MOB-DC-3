@@ -8,7 +8,44 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController
+{
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var ageField: UITextField!
+    
+    
+    @IBAction func submitAction(sender: AnyObject) {
+        helloLabel.text = "Hello world"
+    }
+    
+    @IBAction func todoTwoAction(sender: AnyObject) {
+        helloLabel.text = "Hello \(nameField.text), you are \(ageField.text) years old!"
+    }
+    
+    
+    @IBAction func todoThreeAction(sender: AnyObject) {
+        if (ageField.text.toInt() >= 16) {
+            helloLabel.text = "You can drive."
+        } else if (ageField.text.toInt() >= 18) {
+            helloLabel.text = "You can vote."
+        } else if (ageField.text.toInt() >= 21) {
+            helloLabel.text = "You an drink."
+        }
+    }
+
+    @IBAction func todoFourAction(sender: AnyObject) {
+        if (ageField.text.toInt() >= 16 && ageField.text.toInt() < 18) {
+            helloLabel.text = "You can drive."
+        } else if (ageField.text.toInt() >= 18 && ageField.text.toInt() < 21 ) {
+            helloLabel.text = "You can drive and vote."
+        } else if (ageField.text.toInt() > 21) {
+            helloLabel.text = "You can drive, vote, and drink (but not at the same time!)."
+    }
+    
+    }
+    
     /*
     TODO one: hook up a button in interface builder to a new function (to be written) in this class. Also hook up the label to this class. When the button is clicked, the function to be written must make a label say ‘hello world!’
     

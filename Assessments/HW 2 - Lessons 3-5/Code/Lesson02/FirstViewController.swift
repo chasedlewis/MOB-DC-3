@@ -21,42 +21,28 @@ class FirstViewController: UIViewController
     }
     
     @IBAction func todoTwoAction(sender: AnyObject) {
-        helloLabel.text = "Hello \(nameField.text), you are \(ageField.text) years old!"
+        helloLabel.text = "Hello \(nameField.text), you are \(ageField.text.toInt()) years old!"
     }
     
-    /* This function isn't working, and I think it's because the input of the ageField hasn't been restricted to just integers.
     
     @IBAction func todoThreeAction(sender: AnyObject) {
-        if (ageField.text >= 16) {
+        if (ageField.text.toInt() >= 16) {
             helloLabel.text = "You can drive."
-        } else if (ageField.text >= 18) {
+        } else if (ageField.text.toInt() >= 18) {
             helloLabel.text = "You can vote."
-        } else if (ageField.text >= 21) {
+        } else if (ageField.text.toInt() >= 21) {
             helloLabel.text = "You an drink."
+        }
     }
-    */
-    
-    
-    /* Same problem with this function
-    
+
     @IBAction func todoFourAction(sender: AnyObject) {
-        if (ageField.text >= 16 && ageField.text < 18) {
+        if (ageField.text.toInt() >= 16 && ageField.text.toInt() < 18) {
             helloLabel.text = "You can drive."
-        } else if (ageField.text >= 18 && ageField.text < 21 ) {
+        } else if (ageField.text.toInt() >= 18 && ageField.text.toInt() < 21 ) {
             helloLabel.text = "You can drive and vote."
-        } else if (ageField.text > 21) {
+        } else if (ageField.text.toInt() > 21) {
             helloLabel.text = "You can drive, vote, and drink (but not at the same time!)."
     }
-    
-    */
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

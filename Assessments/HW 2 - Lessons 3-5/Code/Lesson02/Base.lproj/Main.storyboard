@@ -71,8 +71,8 @@
                                 </state>
                                 <connections>
                                     <action selector="submitAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vHd-a8-afZ"/>
-                                    <action selector="todoFourAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rwi-SU-Lic"/>
-                                    <action selector="todoThreeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="srF-9U-i9Q"/>
+                                    <action selector="todoFourAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rnr-eg-eko"/>
+                                    <action selector="todoThreeAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Iok-1v-71B"/>
                                     <action selector="todoTwoAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dwP-SK-6Kl"/>
                                 </connections>
                             </button>
