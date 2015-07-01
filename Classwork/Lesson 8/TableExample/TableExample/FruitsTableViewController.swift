@@ -9,9 +9,17 @@
 import UIKit
 
 class FruitsTableViewController: UITableViewController {
+    
+    var data = ["Apple", "Apricot", "Banana", "Blueberry", "Cantaloupe", "Cherry",
+        "Clementine", "Coconut", "Cranberry", "Fig", "Grape", "Grapefruit",
+        "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
+        "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
+        "Pear", "Pineapple", "Raspberry", "Strawberry"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,6 +28,14 @@ class FruitsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .None
+    }
+    
+    override func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,25 +46,32 @@ class FruitsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return data.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
-        // Configure the cell...
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("FruitCell", forIndexPath: indexPath) as! UITableViewCell
+
+        cell.textLabel?.text = data[indexPath.row]
 
         return cell
     }
-    */
 
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let movedObject = self.data[sourceIndexPath.row]
+        data.removeAtIndex(sourceIndexPath.row)
+        data.insert(movedObject, atIndex: destinationIndexPath.row)
+        NSLog("%@", "\(sourceIndexPath.row) => \(destinationIndexPath.row) \(data)")
+        // To check for correctness enable: self.tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -76,13 +99,14 @@ class FruitsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the item to be re-orderable.
+        
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation

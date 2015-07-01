@@ -13,6 +13,8 @@
 		4ED7D6011B44849F002A1EB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED7D6001B44849F002A1EB3 /* Images.xcassets */; };
 		4ED7D6041B44849F002A1EB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED7D6021B44849F002A1EB3 /* LaunchScreen.xib */; };
 		4ED7D6101B44849F002A1EB3 /* Table_Example_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7D60F1B44849F002A1EB3 /* Table_Example_2Tests.swift */; };
+		4ED7D61B1B448812002A1EB3 /* Gestures.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED7D6191B448812002A1EB3 /* Gestures.png */; };
+		4ED7D61C1B448812002A1EB3 /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED7D61A1B448812002A1EB3 /* Players.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		4ED7D6091B44849F002A1EB3 /* Table Example 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Table Example 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED7D60E1B44849F002A1EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ED7D60F1B44849F002A1EB3 /* Table_Example_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_Example_2Tests.swift; sourceTree = "<group>"; };
+		4ED7D6191B448812002A1EB3 /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
+		4ED7D61A1B448812002A1EB3 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				4ED7D5FB1B44849F002A1EB3 /* ViewController.swift */,
 				4ED7D5FD1B44849F002A1EB3 /* Main.storyboard */,
 				4ED7D6001B44849F002A1EB3 /* Images.xcassets */,
+				4ED7D6191B448812002A1EB3 /* Gestures.png */,
+				4ED7D61A1B448812002A1EB3 /* Players.png */,
 				4ED7D6021B44849F002A1EB3 /* LaunchScreen.xib */,
 				4ED7D5F71B44849F002A1EB3 /* Supporting Files */,
 			);
@@ -193,7 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED7D5FF1B44849F002A1EB3 /* Main.storyboard in Resources */,
+				4ED7D61B1B448812002A1EB3 /* Gestures.png in Resources */,
 				4ED7D6041B44849F002A1EB3 /* LaunchScreen.xib in Resources */,
+				4ED7D61C1B448812002A1EB3 /* Players.png in Resources */,
 				4ED7D6011B44849F002A1EB3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
