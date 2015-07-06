@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>16B50A47-41D5-4FFC-8650-75452E964437</string>
+	<string>42B03745-8E57-459E-AA1F-08ACCE8850B3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Lesson09-Protocol</string>
+	<string>Protocol</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
-		<string>github.com:ga-students/MOB-DC-3.git</string>
+		<string>https://github.com/chasedlewis/MOB-DC-3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Solutions/Lesson09/Lesson09-Protocol.playground</string>
+	<string>Classwork/Lesson 9/Protocol.playground</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:ga-students/MOB-DC-3.git</string>
+	<string>https://github.com/chasedlewis/MOB-DC-3.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
