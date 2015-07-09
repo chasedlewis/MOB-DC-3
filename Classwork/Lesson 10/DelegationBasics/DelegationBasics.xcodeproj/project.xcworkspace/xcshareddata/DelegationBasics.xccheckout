@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6BC7044D-961F-45EB-B148-2B9D9DEE27F6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>DelegationBasics</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
 		<string>https://github.com/chasedlewis/MOB-DC-3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Classwork/Lesson 10/DelegationBasics/DelegationBasics.xcodeproj</string>
+	<string>Classwork/Lesson 10/DelegationBasics/DelegationBasics.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
