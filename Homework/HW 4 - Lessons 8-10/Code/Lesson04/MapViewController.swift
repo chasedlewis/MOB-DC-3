@@ -8,10 +8,22 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var firstTextView: UITextView!
+    @IBOutlet weak var secondTextView: UITextView!
+    @IBOutlet weak var tableView: UITableView!
+    var dict = [[String: String]]()
+    let cellID = "CellID2"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstTextView.delegate = self
+        secondTextView.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
         
         /*
         TODO three: Add TWO text views and a table view to this view controller, either using code or storybaord. Accept keyboard input from the two text views. When the 'return' button is pressed on the SECOND text view, add the text view data to a dictionary. The KEY in the dictionary should be the string in the first text view, the VALUE should be the second.
@@ -19,4 +31,31 @@ class MapViewController: UIViewController {
         TODO five: Make the background of the text boxes in this controller BLUE when the keyboard comes up, and RED when it goes down. Start with UIKeyboardWillShowNotification and NSNotificationCenter.
         */
     }
+    
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        self.view.endEditing(true)
+        
+        dict = [[self.FirstTextView.text: self.SecondTextView.text]]
+        println(dict)
+        
+        TableView.reloadData()
+        return true
+
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dict.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
+        cell.textLabel?.text =
+        
+    }
+    
+
+    
+    
+    
 }
