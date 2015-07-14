@@ -7,15 +7,16 @@
 //
 
 import Foundation
-
 import UIKit
 
 class RadioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let center = NSNotificationCenter.defaultCenter()
     }
+    
+    let notification = NSNotification(name: "Keyword", object: Self)
+    let center = NSNotificationCenter.defaultCenter()
+    center.PostNotification(notification)
     
 }
