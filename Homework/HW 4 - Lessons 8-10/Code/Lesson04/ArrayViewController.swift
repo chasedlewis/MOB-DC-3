@@ -23,6 +23,7 @@ class ArrayViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
+
         
         
         //        self.dismissViewControllerAnimated(false, completion: nil)
