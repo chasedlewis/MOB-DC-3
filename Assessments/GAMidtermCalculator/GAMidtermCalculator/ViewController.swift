@@ -8,127 +8,134 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var allClearButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     var storedValue1:Double = 0
     var storedValue2:Double = 0
     var finalValue: Double = 0
     var whichFunction: String = ""
+    var firstValueStored: String = ""
+    var equalsButtonPressed: String = ""
+    let cellID = "cellID"
+    var textArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
+    }
+    
+    func toDoubleFromString() -> Double {
+        let currentValue = label.text! as NSString
+        var number = currentValue.doubleValue
+        return number
+    }
+    
+    func toStringToDisplay(doubleNumber:Double) {
+        if doubleNumber % 1 == 0 {
+            let newNumber = Int(doubleNumber)
+            label.text = String(newNumber)
+        } else {
+            label.text = "\(doubleNumber)"
+        }
+    }
+    
+    func displayNumber(buttonNumber: String) {
+        if label.text == "0" || equalsButtonPressed == "yes" {
+            label.text = "\(buttonNumber)"
+        } else {
+            label.text! += "\(buttonNumber)"
+        }
+    }
+    
+    func prepareForTableView(doubleNumber: Double) -> String {
+        if doubleNumber % 1 == 0 {
+            let newNumber = Int(doubleNumber)
+            return String(newNumber)
+        } else {
+            return "\(doubleNumber)"
+        }
     }
     
     @IBAction func allClearAction(sender: AnyObject) {
-        storedValue1 = 0
-        storedValue2 = 0
-        label.text = "0"
+        switch firstValueStored {
+            case "yes":
+                storedValue2 = 0
+                label.text = ""
+                firstValueStored = "no"
+                allClearButton.setTitle("AC", forState: .Normal)
+            default:
+                storedValue1 = 0
+                storedValue2 = 0
+                label.text = "0"
+        }
     }
 
     @IBAction func negativeAction(sender: AnyObject) {
-        let currentValue = label.text! as NSString
-        var number = currentValue.doubleValue
-        number = -1 * number
-        if number % 1 == 0 {
-            let newNumber = Int(number)
-            label.text = String(newNumber)
-        } else {
-            label.text = "\(number)"
-        }
+        var doubleNumber = toDoubleFromString()
+        doubleNumber = -1 * doubleNumber
+        toStringToDisplay(doubleNumber)
     }
     
     @IBAction func percentageAction(sender: AnyObject) {
-        var currentValue = label.text! as NSString
-        var number = currentValue.doubleValue
-        number = number / 100
-        if number % 1 == 0 {
-            let newNumber = Int(number)
-            label.text = String(newNumber)
-        } else {
-            label.text = "\(number)"
-        }
-
+        var doubleNumber = toDoubleFromString()
+        doubleNumber = doubleNumber / 100
+        toStringToDisplay(doubleNumber)
     }
     
     @IBAction func zeroAction(sender: AnyObject) {
-        if label.text == "0" {
-            // Do nothing
-        } else {
-            label.text! += "0"
-        }
+        displayNumber("0")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func oneAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "1"
-        } else {
-            label.text! += "1"
-        }
+        displayNumber("1")
+        equalsButtonPressed = "no"
     }
    
     @IBAction func twoAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "2"
-        } else {
-            label.text! += "2"
-        }
+        displayNumber("2")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func threeAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "3"
-        } else {
-            label.text! += "3"
-        }
+        displayNumber("3")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func fourAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "4"
-        } else {
-            label.text! += "4"
-        }
+        displayNumber("4")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func fiveAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "5"
-        } else {
-            label.text! += "5"
-        }
+        displayNumber("5")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func sixAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "6"
-        } else {
-            label.text! += "6"
-        }
+        displayNumber("6")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func sevenAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "7"
-        } else {
-            label.text! += "7"
-        }
+        displayNumber("7")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func eightAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "8"
-        } else {
-            label.text! += "8"
-        }
+        displayNumber("8")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func nineAction(sender: AnyObject) {
-        if label.text == "0" {
-            label.text = "9"
-        } else {
-            label.text! += "9"
-        }
+        displayNumber("9")
+        equalsButtonPressed = "no"
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
@@ -142,81 +149,111 @@ class ViewController: UIViewController {
     
     @IBAction func additionAction(sender: AnyObject) {
         whichFunction = "addition"
-        let newString = label.text! as NSString
-        storedValue1 = newString.doubleValue
+        storedValue1 = toDoubleFromString()
         label.text = ""
+        allClearButton.setTitle("C", forState: .Normal)
+        firstValueStored = "yes"
     }
     
     @IBAction func subtractionAction(sender: AnyObject) {
         whichFunction = "subtraction"
-        let newString = label.text! as NSString
-        storedValue1 = newString.doubleValue
+        storedValue1 = toDoubleFromString()
         label.text = ""
+        allClearButton.setTitle("C", forState: .Normal)
+        firstValueStored = "yes"
     }
     
     @IBAction func multiplicationAction(sender: AnyObject) {
         whichFunction = "multiplication"
-        let newString = label.text! as NSString
-        storedValue1 = newString.doubleValue
+        storedValue1 = toDoubleFromString()
         label.text = ""
+        allClearButton.setTitle("C", forState: .Normal)
+        firstValueStored = "yes"
     }
     
     @IBAction func divisionAction(sender: AnyObject) {
         whichFunction = "division"
-        let newString = label.text! as NSString
-        storedValue1 = newString.doubleValue
+        storedValue1 = toDoubleFromString()
         label.text = ""
+        allClearButton.setTitle("C", forState: .Normal)
+        firstValueStored = "yes"
     }
     
     
     @IBAction func equalsAction(sender: AnyObject) {
-        let newString = label.text! as NSString
-        storedValue2 = newString.doubleValue
+        storedValue2 = toDoubleFromString()
+        firstValueStored = "no"
+        equalsButtonPressed = "yes"
+        allClearButton.setTitle("AC", forState: .Normal)
         switch whichFunction {
             case "addition":
                 finalValue = storedValue1 + storedValue2
-                if finalValue % 1 == 0 {
-                    let finalIntValue = Int(finalValue)
-                    label.text = String(finalIntValue)
-                } else {
-                    label.text = finalValue.description
-                }
+                toStringToDisplay(finalValue)
+                let tableValue1 = prepareForTableView(storedValue1)
+                let tableValue2 = prepareForTableView(storedValue2)
+                let tableFinal = prepareForTableView(finalValue)
+                textArray.append("\(tableValue1) + \(tableValue2) = \(tableFinal)")
+                tableView.reloadData()
                 storedValue1 = 0
                 storedValue2 = 0
             case "subtraction":
                 finalValue = storedValue1 - storedValue2
-                if finalValue % 1 == 0 {
-                    let finalIntValue = Int(finalValue)
-                    label.text = String(finalIntValue)
-                } else {
-                    label.text = finalValue.description
-                }
+                toStringToDisplay(finalValue)
+                let tableValue1 = prepareForTableView(storedValue1)
+                let tableValue2 = prepareForTableView(storedValue2)
+                let tableFinal = prepareForTableView(finalValue)
+                textArray.append("\(tableValue1) - \(tableValue2) = \(tableFinal)")
+                tableView.reloadData()
                 storedValue1 = 0
                 storedValue2 = 0
             case "multiplication":
                 finalValue = storedValue1 * storedValue2
-                if finalValue % 1 == 0 {
-                    let finalIntValue = Int(finalValue)
-                    label.text = String(finalIntValue)
-                } else {
-                    label.text = finalValue.description
-                }
+                toStringToDisplay(finalValue)
+                let tableValue1 = prepareForTableView(storedValue1)
+                let tableValue2 = prepareForTableView(storedValue2)
+                let tableFinal = prepareForTableView(finalValue)
+                textArray.append("\(tableValue1) x \(tableValue2) = \(tableFinal)")
+                tableView.reloadData()
                 storedValue1 = 0
                 storedValue2 = 0
             case "division":
                 finalValue = storedValue1 / storedValue2
-                if finalValue % 1 == 0 {
-                    let finalIntValue = Int(finalValue)
-                    label.text = String(finalIntValue)
-                } else {
-                    label.text = finalValue.description
-                }
+                toStringToDisplay(finalValue)
+                let tableValue1 = prepareForTableView(storedValue1)
+                let tableValue2 = prepareForTableView(storedValue2)
+                let tableFinal = prepareForTableView(finalValue)
+                textArray.append("\(tableValue1) ÷ \(tableValue2) = \(tableFinal)")
+                tableView.reloadData()
                 storedValue1 = 0
                 storedValue2 = 0
             default:
                 println("default")
     }
 }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.textArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
+        cell.textLabel?.text = self.textArray[indexPath.row]
+        cell.backgroundColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = UIFont(name: "Helvetica-light", size: 20.0)
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            textArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
