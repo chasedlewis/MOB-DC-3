@@ -18,9 +18,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var storedValue2:Double = 0
     var finalValue: Double = 0
     var whichFunction: String = ""
-    var firstValueStored: String = ""
+    var functionButtonPressed: String = ""
+    var signButtonPressed: String = ""
     var equalsButtonPressed: String = ""
-    let cellID = "cellID"
+    var clearFunctionPressed: String = ""
+    let cellID = "historyCell"
     var textArray = [String]()
     
     override func viewDidLoad() {
@@ -47,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func displayNumber(buttonNumber: String) {
-        if label.text == "0" || equalsButtonPressed == "yes" {
+        if label.text == "0" || (functionButtonPressed == "yes" && label.text != "0") || equalsButtonPressed == "yes" {
             label.text = "\(buttonNumber)"
         } else {
             label.text! += "\(buttonNumber)"
@@ -64,11 +66,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func allClearAction(sender: AnyObject) {
-        switch firstValueStored {
+        switch clearFunctionPressed {
             case "yes":
                 storedValue2 = 0
                 label.text = ""
-                firstValueStored = "no"
+                clearFunctionPressed = "no"
                 allClearButton.setTitle("AC", forState: .Normal)
             default:
                 storedValue1 = 0
@@ -92,51 +94,61 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func zeroAction(sender: AnyObject) {
         displayNumber("0")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func oneAction(sender: AnyObject) {
         displayNumber("1")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
    
     @IBAction func twoAction(sender: AnyObject) {
         displayNumber("2")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func threeAction(sender: AnyObject) {
         displayNumber("3")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func fourAction(sender: AnyObject) {
         displayNumber("4")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func fiveAction(sender: AnyObject) {
         displayNumber("5")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func sixAction(sender: AnyObject) {
         displayNumber("6")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func sevenAction(sender: AnyObject) {
         displayNumber("7")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func eightAction(sender: AnyObject) {
         displayNumber("8")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func nineAction(sender: AnyObject) {
         displayNumber("9")
         equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
@@ -151,39 +163,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func additionAction(sender: AnyObject) {
         whichFunction = "addition"
         storedValue1 = toDoubleFromString()
-        label.text = ""
         allClearButton.setTitle("C", forState: .Normal)
-        firstValueStored = "yes"
+        functionButtonPressed = "yes"
+        clearFunctionPressed = "yes"
     }
     
     @IBAction func subtractionAction(sender: AnyObject) {
         whichFunction = "subtraction"
         storedValue1 = toDoubleFromString()
-        label.text = ""
         allClearButton.setTitle("C", forState: .Normal)
-        firstValueStored = "yes"
+        functionButtonPressed = "yes"
+        clearFunctionPressed = "yes"
     }
     
     @IBAction func multiplicationAction(sender: AnyObject) {
         whichFunction = "multiplication"
         storedValue1 = toDoubleFromString()
-        label.text = ""
         allClearButton.setTitle("C", forState: .Normal)
-        firstValueStored = "yes"
+        functionButtonPressed = "yes"
+        clearFunctionPressed = "yes"
     }
     
     @IBAction func divisionAction(sender: AnyObject) {
         whichFunction = "division"
         storedValue1 = toDoubleFromString()
-        label.text = ""
         allClearButton.setTitle("C", forState: .Normal)
-        firstValueStored = "yes"
+        functionButtonPressed = "yes"
+        clearFunctionPressed = "yes"
     }
     
     
     @IBAction func equalsAction(sender: AnyObject) {
         storedValue2 = toDoubleFromString()
-        firstValueStored = "no"
+        functionButtonPressed = "no"
         equalsButtonPressed = "yes"
         allClearButton.setTitle("AC", forState: .Normal)
         switch whichFunction {
@@ -194,9 +206,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
                 textArray.append("\(tableValue1) + \(tableValue2) = \(tableFinal)")
-                tableView.reloadData()
-                storedValue1 = 0
-                storedValue2 = 0
             case "subtraction":
                 finalValue = storedValue1 - storedValue2
                 toStringToDisplay(finalValue)
@@ -204,9 +213,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
                 textArray.append("\(tableValue1) - \(tableValue2) = \(tableFinal)")
-                tableView.reloadData()
-                storedValue1 = 0
-                storedValue2 = 0
             case "multiplication":
                 finalValue = storedValue1 * storedValue2
                 toStringToDisplay(finalValue)
@@ -214,9 +220,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
                 textArray.append("\(tableValue1) x \(tableValue2) = \(tableFinal)")
-                tableView.reloadData()
-                storedValue1 = 0
-                storedValue2 = 0
             case "division":
                 finalValue = storedValue1 / storedValue2
                 toStringToDisplay(finalValue)
@@ -224,12 +227,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
                 textArray.append("\(tableValue1) ÷ \(tableValue2) = \(tableFinal)")
-                tableView.reloadData()
-                storedValue1 = 0
-                storedValue2 = 0
+            
             default:
                 println("default")
-    }
+        }
+        
+        
+        tableView.reloadData()
+        storedValue1 = 0
+        storedValue2 = 0
+        
+        let indexPathToScrollTo = NSIndexPath(forRow: textArray.count - 1, inSection: 0)
+        tableView.scrollToRowAtIndexPath(indexPathToScrollTo, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
 }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -237,10 +246,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.textArray[indexPath.row]
         cell.backgroundColor = UIColor.blackColor()
-        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.font = UIFont(name: "Helvetica-light", size: 20.0)
         return cell
     }
@@ -252,9 +261,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        toStringToDisplay(finalValue)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -263,4 +273,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 
 }
+
+/* Add the ability to select one of the equations from the table view and then the result of that equation will take the place of the latest solution on the screen so it can then be used again in a new function. Also, add commas in the numbers to make them more readable
+*/
 
