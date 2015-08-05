@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var label: UILabel!
+
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var allClearButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func toDoubleFromString() -> Double {
-        let currentValue = label.text! as NSString
+        let currentValue = textView.text! as NSString
         var number = currentValue.doubleValue
         return number
     }
@@ -42,17 +43,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func toStringToDisplay(doubleNumber:Double) {
         if doubleNumber % 1 == 0 {
             let newNumber = Int(doubleNumber)
-            label.text = String(newNumber)
+            textView.text = String(newNumber)
         } else {
-            label.text = "\(doubleNumber)"
+            textView.text = "\(doubleNumber)"
         }
     }
     
     func displayNumber(buttonNumber: String) {
-        if label.text == "0" || (functionButtonPressed == "yes" && label.text != "0") || equalsButtonPressed == "yes" {
-            label.text = "\(buttonNumber)"
+        if textView.text == "0" || (functionButtonPressed == "yes" && textView.text != "0") || equalsButtonPressed == "yes" {
+            textView.text = "\(buttonNumber)"
         } else {
-            label.text! += "\(buttonNumber)"
+            textView.text! += "\(buttonNumber)"
         }
     }
     
@@ -69,13 +70,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch clearFunctionPressed {
             case "yes":
                 storedValue2 = 0
-                label.text = ""
+                textView.text = ""
                 clearFunctionPressed = "no"
                 allClearButton.setTitle("AC", forState: .Normal)
             default:
                 storedValue1 = 0
                 storedValue2 = 0
-                label.text = "0"
+                textView.text = "0"
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
         }
     }
 
@@ -152,12 +155,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
-        if label.text?.rangeOfString(".") != nil {
+        if (textView.text?.rangeOfString(".") != nil) && (equalsButtonPressed == "no") && (functionButtonPressed == "no") {
             //Do nothing
+        } else if (equalsButtonPressed == "yes") || (textView.text == "0") || (functionButtonPressed == "yes") {
+            textView.text! = "0."
         } else {
-            label.text! += "."
-            
+            textView.text! += "."
         }
+        equalsButtonPressed = "no"
+        functionButtonPressed = "no"
     }
     
     @IBAction func additionAction(sender: AnyObject) {
@@ -194,9 +200,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @IBAction func equalsAction(sender: AnyObject) {
+        
+        //There is a bug with the app that will crash it if the user presses the equals button right after opening the app
+        
         storedValue2 = toDoubleFromString()
         functionButtonPressed = "no"
         equalsButtonPressed = "yes"
+        clearFunctionPressed = "no"
         allClearButton.setTitle("AC", forState: .Normal)
         switch whichFunction {
             case "addition":
