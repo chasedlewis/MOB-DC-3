@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
-    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var allClearButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,11 +32,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        
     }
     
     func toDoubleFromString() -> Double {
-        let currentValue = textView.text! as NSString
+        let currentValue = label.text! as NSString
         var number = currentValue.doubleValue
         return number
     }
@@ -43,17 +43,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func toStringToDisplay(doubleNumber:Double) {
         if doubleNumber % 1 == 0 {
             let newNumber = Int(doubleNumber)
-            textView.text = String(newNumber)
+            label.text = String(newNumber)
         } else {
-            textView.text = "\(doubleNumber)"
+            label.text = "\(doubleNumber)"
         }
     }
     
     func displayNumber(buttonNumber: String) {
-        if textView.text == "0" || (functionButtonPressed == "yes" && textView.text != "0") || equalsButtonPressed == "yes" {
-            textView.text = "\(buttonNumber)"
+        if label.text == "0" || (functionButtonPressed == "yes" && label.text != "0") || equalsButtonPressed == "yes" {
+            label.text = "\(buttonNumber)"
         } else {
-            textView.text! += "\(buttonNumber)"
+            label.text! += "\(buttonNumber)"
         }
     }
     
@@ -70,13 +70,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch clearFunctionPressed {
             case "yes":
                 storedValue2 = 0
-                textView.text = ""
+                label.text = ""
                 clearFunctionPressed = "no"
                 allClearButton.setTitle("AC", forState: .Normal)
             default:
                 storedValue1 = 0
                 storedValue2 = 0
-                textView.text = "0"
+                label.text = "0"
             equalsButtonPressed = "no"
             functionButtonPressed = "no"
         }
@@ -155,12 +155,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
-        if (textView.text?.rangeOfString(".") != nil) && (equalsButtonPressed == "no") && (functionButtonPressed == "no") {
+        if (label.text?.rangeOfString(".") != nil) && (equalsButtonPressed == "no") && (functionButtonPressed == "no") {
             //Do nothing
-        } else if (equalsButtonPressed == "yes") || (textView.text == "0") || (functionButtonPressed == "yes") {
-            textView.text! = "0."
+        } else if (equalsButtonPressed == "yes") || (label.text == "0") || (functionButtonPressed == "yes") {
+            label.text! = "0."
         } else {
-            textView.text! += "."
+            label.text! += "."
         }
         equalsButtonPressed = "no"
         functionButtonPressed = "no"
@@ -200,9 +200,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @IBAction func equalsAction(sender: AnyObject) {
-        
-        //There is a bug with the app that will crash it if the user presses the equals button right after opening the app
-        
         storedValue2 = toDoubleFromString()
         functionButtonPressed = "no"
         equalsButtonPressed = "yes"
@@ -272,18 +269,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        toStringToDisplay(finalValue)
+        // Figure this out
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
 }
 
-/* Add the ability to select one of the equations from the table view and then the result of that equation will take the place of the latest solution on the screen so it can then be used again in a new function. Also, add commas in the numbers to make them more readable
+/* Add the ability to select one of the equations from the table view and then the result of that equation will take the place of the latest solution on the screen so it can then be used again in a new function. Also, add commas in the numbers to make them more readable. And add pasteboards
+
+    Problems: Need to limit the amount of numbers that can be entered because if not it will be input as "44444444444444444..." on the label and then the math functions won't work
+    Problem: App crashes when equals button is the first button pressed when opening the app
 */
 
