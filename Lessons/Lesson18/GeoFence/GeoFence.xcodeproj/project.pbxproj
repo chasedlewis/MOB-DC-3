@@ -19,6 +19,8 @@
 		2EAE795A1B6EB3C300194C30 /* Fence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE79591B6EB3C300194C30 /* Fence.swift */; };
 		2EAE795C1B6EB43F00194C30 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAE795B1B6EB43F00194C30 /* CoreLocation.framework */; };
 		2EAE795F1B6EB46500194C30 /* FenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE795E1B6EB46500194C30 /* FenceStore.swift */; };
+		4EC1386E1B72DBB1005FC592 /* TestLocations.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4EC1386D1B72DBB1005FC592 /* TestLocations.gpx */; };
+		4EC138701B72DDFE005FC592 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1386F1B72DDFE005FC592 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2EAE79591B6EB3C300194C30 /* Fence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fence.swift; sourceTree = "<group>"; };
 		2EAE795B1B6EB43F00194C30 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2EAE795E1B6EB46500194C30 /* FenceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FenceStore.swift; sourceTree = "<group>"; };
+		4EC1386D1B72DBB1005FC592 /* TestLocations.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = TestLocations.gpx; path = ../TestLocations.gpx; sourceTree = "<group>"; };
+		4EC1386F1B72DDFE005FC592 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,11 @@
 		2EAE792F1B6E97B900194C30 /* GeoFence */ = {
 			isa = PBXGroup;
 			children = (
+				4EC1386D1B72DBB1005FC592 /* TestLocations.gpx */,
 				2EAE79321B6E97B900194C30 /* AppDelegate.swift */,
 				2EAE79371B6E97B900194C30 /* ViewController.swift */,
 				2EAE79571B6E9DA900194C30 /* AddViewController.swift */,
+				4EC1386F1B72DDFE005FC592 /* Utilities.swift */,
 				2EAE79591B6EB3C300194C30 /* Fence.swift */,
 				2EAE795E1B6EB46500194C30 /* FenceStore.swift */,
 				2EAE79391B6E97B900194C30 /* Main.storyboard */,
@@ -222,6 +228,7 @@
 			files = (
 				2EAE793B1B6E97B900194C30 /* Main.storyboard in Resources */,
 				2EAE79401B6E97B900194C30 /* LaunchScreen.xib in Resources */,
+				4EC1386E1B72DBB1005FC592 /* TestLocations.gpx in Resources */,
 				2EAE793D1B6E97B900194C30 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +249,7 @@
 			files = (
 				2EAE79381B6E97B900194C30 /* ViewController.swift in Sources */,
 				2EAE79331B6E97B900194C30 /* AppDelegate.swift in Sources */,
+				4EC138701B72DDFE005FC592 /* Utilities.swift in Sources */,
 				2EAE79581B6E9DA900194C30 /* AddViewController.swift in Sources */,
 				2EAE795F1B6EB46500194C30 /* FenceStore.swift in Sources */,
 				2EAE79361B6E97B900194C30 /* GeoFence.xcdatamodeld in Sources */,
@@ -443,6 +451,7 @@
 				2EAE79511B6E97BA00194C30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EAE79521B6E97BA00194C30 /* Build configuration list for PBXNativeTarget "GeoFenceTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +460,7 @@
 				2EAE79541B6E97BA00194C30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

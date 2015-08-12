@@ -59,7 +59,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func locateMe(sender: UIBarButtonItem) {
-        println("Locate me")
+        centerMapOnUserLocationForMapView(mapView)
     }
     
     @IBAction func add(sender: UIBarButtonItem) {

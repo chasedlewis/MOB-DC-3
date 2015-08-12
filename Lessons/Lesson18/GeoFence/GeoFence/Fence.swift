@@ -9,8 +9,9 @@
 import Foundation
 import CoreData
 import CoreLocation
+import MapKit
 
-class Fence: NSManagedObject {
+class Fence: NSManagedObject, MKAnnotation {
 
     @NSManaged var uuid: String
     @NSManaged var latitude: Double
@@ -21,6 +22,18 @@ class Fence: NSManagedObject {
     
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    
+    var title: String {
+        return note
+    }
+    
+    var eventType: EventType {
+        return EventType(rawValue: Int(fireMoment))!
+    }
+    
+    var subtitle: String {
+        return "Radius \(Int(radius))m - Type:"
     }
 
 }

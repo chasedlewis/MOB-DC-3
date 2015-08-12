@@ -259,7 +259,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="LQ4-26-4Na" style="IBUITableViewCellStyleDefault" id="2zN-qT-tqp">
+                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="historyCell" textLabel="LQ4-26-4Na" style="IBUITableViewCellStyleDefault" id="2zN-qT-tqp" customClass="cellID">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2zN-qT-tqp" id="spV-Sb-bev">
@@ -277,6 +277,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="0r7-ut-aEp"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="sUM-cR-HA1"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="q65-wp-ev9">
                                 <rect key="frame" x="0.0" y="96" width="600" height="67"/>

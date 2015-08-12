@@ -29,8 +29,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
@@ -239,13 +237,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 println("default")
         }
         
-        
         tableView.reloadData()
         storedValue1 = 0
         storedValue2 = 0
         
-        let indexPathToScrollTo = NSIndexPath(forRow: textArray.count - 1, inSection: 0)
-        tableView.scrollToRowAtIndexPath(indexPathToScrollTo, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+        if whichFunction == "" {
+            // Do nothing to avoid the app from crashing
+        } else {
+            let indexPathToScrollTo = NSIndexPath(forRow: textArray.count - 1, inSection: 0)
+            tableView.scrollToRowAtIndexPath(indexPathToScrollTo, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+        }
 }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -269,8 +270,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // Figure this out
+        println("HERE")
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        println(cell?.textLabel?.text)
     }
+    
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+//        let cellText = cell?.textLabel?.text
+//        if let cellText = cellText {
+//            label.text = cellText
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

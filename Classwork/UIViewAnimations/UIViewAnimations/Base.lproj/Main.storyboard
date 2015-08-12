@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JJ4-Kx-IZE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UIViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sq-7h-neH">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Fade Out" id="0EE-8z-TmV">
+                                        <connections>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="7fi-iK-dYu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BaG-ob-Zm5"/>
+                                    <barButtonItem title="Fade In" id="7LZ-uO-d0A">
+                                        <connections>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="6mm-8r-hMC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wDX-1X-6ly"/>
+                                    <barButtonItem title="Scale Down" id="sRI-UW-jpn">
+                                        <connections>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="LwX-pO-Z5j"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4OG-9F-Hgd"/>
+                                    <barButtonItem title="Scale Up" id="cal-mN-Qax">
+                                        <connections>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="GI5-rF-7Bu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VWC-5X-A20"/>
+                                    <barButtonItem title="Move" id="Ffu-7M-EyS">
+                                        <connections>
+                                            <action selector="animate:" destination="vXZ-lx-hvc" id="gRW-cA-LoS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWN-dD-NEU">
+                                <rect key="frame" x="201" y="200" width="199" height="199"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7XJ-rS-6r4">
+                                <rect key="frame" x="272" y="407" width="57" height="57"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7XJ-rS-6r4" secondAttribute="centerX" constant="-0.5" id="4mw-4v-4eP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2sq-7h-neH" secondAttribute="trailing" constant="-16" id="8DJ-BJ-ZI4"/>
+                            <constraint firstItem="7XJ-rS-6r4" firstAttribute="top" secondItem="OWN-dD-NEU" secondAttribute="bottom" constant="8" id="MSy-xJ-Thx"/>
+                            <constraint firstAttribute="centerY" secondItem="OWN-dD-NEU" secondAttribute="centerY" constant="29.5" id="MYS-6k-Web"/>
+                            <constraint firstAttribute="centerX" secondItem="OWN-dD-NEU" secondAttribute="centerX" constant="-7.5" id="tEG-Pc-L1D"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2sq-7h-neH" secondAttribute="bottom" id="zrT-n8-29V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="square" destination="OWN-dD-NEU" id="hyW-P5-bJ6"/>
+                        <outlet property="squareCenterYConstraint" destination="MYS-6k-Web" id="Gre-JH-xkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Core Graphics View Controller-->
+        <scene sceneID="16a-s0-MGU">
+            <objects>
+                <viewController id="JJ4-Kx-IZE" customClass="CoreGraphicsViewController" customModule="UIViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wVp-ac-RUq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ENL-Vh-noN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TfF-O7-SHn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oo9-Vj-xEI">
+                                <rect key="frame" x="184" y="147" width="223" height="223"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="oo9-Vj-xEI" secondAttribute="centerX" constant="4.5" id="AjU-Ww-Qvr"/>
+                            <constraint firstAttribute="centerY" secondItem="oo9-Vj-xEI" secondAttribute="centerY" constant="41.5" id="SUX-s3-l9d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="square" destination="oo9-Vj-xEI" id="MT5-fg-fUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCB-vh-GJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="1050"/>
+        </scene>
+        <!--Pop View Controller-->
+        <scene sceneID="Gvd-HG-IRh">
+            <objects>
+                <viewController id="H0D-Y7-epw" customClass="PopViewController" customModule="UIViewAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TUQ-jP-EMd"/>
+                        <viewControllerLayoutGuide type="bottom" id="q4T-hO-6dB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Scp-9M-3XI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-UB-YDd">
+                                <rect key="frame" x="212" y="212" width="176" height="176"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KbS-dj-fAm" appends="YES" id="Zu8-c7-v3P"/>
+                                    <outletCollection property="gestureRecognizers" destination="KbS-dj-fAm" appends="YES" id="18i-rq-HcB"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KbS-dj-fAm" appends="YES" id="pXT-h2-K0J"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="square" destination="Ycu-UB-YDd" id="e96-ES-Oxg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viS-xd-Zed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KbS-dj-fAm">
+                    <connections>
+                        <action selector="viewTapped:" destination="H0D-Y7-epw" id="Xvl-WY-8Dx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="190" y="1761"/>
+        </scene>
+    </scenes>
+</document>

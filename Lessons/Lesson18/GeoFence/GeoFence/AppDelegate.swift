@@ -8,16 +8,50 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
+    
+    let locationManager = CLLocationManager()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories: nil))
+        
         return true
+    }
+    
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        if region is CLCircularRegion {
+            handleRegionEvent(region)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        if region is CLCircularRegion {
+            handleRegionEvent(region)
+        }
+    }
+    
+    func handleRegionEvent(region: CLRegion) {
+        if UIApplication.sharedApplication().applicationState == .Active {
+            // Show an alert
+            println("foo foo")
+        } else {
+            // Send a local notification
+            let notification = UILocalNotification()
+            notification.alertBody = "foo foo"
+            notification.applicationIconBadgeNumber = 1
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
