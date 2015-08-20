@@ -9,33 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var labelXConstraint: NSLayoutConstraint!
-
-
     
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var labelXConstraint: NSLayoutConstraint!
     @IBOutlet weak var label: CalcLabel!
     @IBOutlet weak var allClearButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Variables and Constants
     
     var storedValue1:Double = 0
     var storedValue2:Double = 0
     var finalValue: Double = 0
     var whichFunction: String = ""
-    var functionButtonPressed: String = ""
-    var signButtonPressed: String = ""
-    var equalsButtonPressed: String = ""
-    var clearFunctionPressed: String = ""
+    var functionButtonPressed: Bool = false
+    var equalsButtonPressed: Bool = false
+    var clearFunctionPressed: Bool = false
     var zeroButtonPressed: Bool = false
     let cellID = "historyCell"
     var textArray = [String]()
-    var myBlueColor: UIColor = UIColor(red: (72/255.0), green: (206/255.0), blue: (192/255.0), alpha: 1.0)
+    var myBlueColor: UIColor = UIColor(red: (142/255.0), green: (242/255.0), blue: (173/255.0), alpha: 1.0)
     let unitedStatesLocale = NSLocale(localeIdentifier: "en_US")
     let numberFormatter = NSNumberFormatter()
     
+    // MARK: Setup Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
         tableView.backgroundColor = .blackColor()
+        label.backgroundColor = .blackColor()
         
         let longPressGR = UILongPressGestureRecognizer()
         longPressGR.addTarget(self, action: "textPressed:")
@@ -45,6 +50,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         numberFormatter.locale = unitedStatesLocale
         numberFormatter.maximumFractionDigits = 15
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    // MARK: Number Conversion Functions
     
     func toDoubleFromString() -> Double {
         let currentValue = label.text! as NSString
@@ -63,20 +74,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func displayNumber(buttonNumber: String) {
-        if label.text == "0" || (functionButtonPressed == "yes" && label.text != "0") || equalsButtonPressed == "yes" {
-            label.text = "\(buttonNumber)"
+        if count(label.text!) > 11 && functionButtonPressed == false {
+            labelShake(label)
         } else {
-            label.text! += "\(buttonNumber)"
-            var currentTextDouble = toDoubleFromString()
-            if (label.text?.rangeOfString(".") != nil) && (zeroButtonPressed == true) {
-//                numberFormatter.minimumFractionDigits = 1
-//                var updatedTextString = numberFormatter.stringFromNumber(currentTextDouble)
-//                numberFormatter.minimumFractionDigits = 0
-//                label.text = updatedTextString!
+            if label.text == "0" || (functionButtonPressed && label.text != "0") || equalsButtonPressed {
+                label.text = "\(buttonNumber)"
             } else {
-                var updatedTextString = numberFormatter.stringFromNumber(currentTextDouble)
-                label.text = updatedTextString!
+                label.text! += "\(buttonNumber)"
+                var currentTextDouble = toDoubleFromString()
+                if (label.text?.rangeOfString(".") != nil) && (zeroButtonPressed == true) {
+                    // Do nothing
+                } else {
+                    var updatedTextString = numberFormatter.stringFromNumber(currentTextDouble)
+                    label.text = updatedTextString!
+                }
             }
+            equalsButtonPressed = false
+            functionButtonPressed = false
         }
     }
     
@@ -89,20 +103,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    // MARK: Clear/Negative/Percentage Functions
+    
     @IBAction func allClearAction(sender: AnyObject) {
         label.textColor = .whiteColor()
         switch clearFunctionPressed {
-            case "yes":
+            case true :
                 storedValue2 = 0
                 label.text = ""
-                clearFunctionPressed = "no"
+                clearFunctionPressed = false
                 allClearButton.setTitle("AC", forState: .Normal)
             default:
                 storedValue1 = 0
                 storedValue2 = 0
                 label.text = "0"
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
+            equalsButtonPressed = false
+            functionButtonPressed = false
         }
     }
 
@@ -118,167 +134,101 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toStringToDisplay(doubleNumber)
     }
     
+    // MARK: Number Button Functions
+    
     @IBAction func zeroAction(sender: AnyObject) {
         zeroButtonPressed = true
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("0")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("0")
     }
     
     @IBAction func oneAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("1")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("1")
     }
    
     @IBAction func twoAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("2")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("2")
     }
     
     @IBAction func threeAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-           label.textColor = .grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("3")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("3")
     }
     
     @IBAction func fourAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
         displayNumber("4")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
-        }
     }
     
     @IBAction func fiveAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("5")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("5")
     }
     
     @IBAction func sixAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("6")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("6")
     }
     
     @IBAction func sevenAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("7")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("7")
     }
     
     @IBAction func eightAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("8")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("8")
     }
     
     @IBAction func nineAction(sender: AnyObject) {
-        if count(label.text!) > 11 && functionButtonPressed == "no" {
-            label.textColor = UIColor.grayColor()
-        } else {
-            label.textColor = UIColor.whiteColor()
-            displayNumber("9")
-            equalsButtonPressed = "no"
-            functionButtonPressed = "no"
-        }
+        displayNumber("9")
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
-        if (label.text?.rangeOfString(".") != nil) && (equalsButtonPressed == "no") && (functionButtonPressed == "no") {
+        if (label.text?.rangeOfString(".") != nil) && (equalsButtonPressed == false) && (functionButtonPressed == false) {
             //Do nothing
-        } else if (equalsButtonPressed == "yes") || (label.text == "0") || (functionButtonPressed == "yes") {
+        } else if (equalsButtonPressed) || (label.text == "0") || (functionButtonPressed) {
             label.text! = "0."
         } else {
             label.text! += "."
         }
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        equalsButtonPressed = false
+        functionButtonPressed = false
     }
+    
+    // MARK: Math Functions
     
     @IBAction func additionAction(sender: AnyObject) {
         whichFunction = "addition"
         storedValue1 = toDoubleFromString()
         allClearButton.setTitle("C", forState: .Normal)
-        functionButtonPressed = "yes"
-        clearFunctionPressed = "yes"
+        functionButtonPressed = true
+        clearFunctionPressed = true
     }
     
     @IBAction func subtractionAction(sender: AnyObject) {
         whichFunction = "subtraction"
         storedValue1 = toDoubleFromString()
         allClearButton.setTitle("C", forState: .Normal)
-        functionButtonPressed = "yes"
-        clearFunctionPressed = "yes"
+        functionButtonPressed = true
+        clearFunctionPressed = true
     }
     
     @IBAction func multiplicationAction(sender: AnyObject) {
         whichFunction = "multiplication"
         storedValue1 = toDoubleFromString()
         allClearButton.setTitle("C", forState: .Normal)
-        functionButtonPressed = "yes"
-        clearFunctionPressed = "yes"
+        functionButtonPressed = true
+        clearFunctionPressed = true
     }
     
     @IBAction func divisionAction(sender: AnyObject) {
         whichFunction = "division"
         storedValue1 = toDoubleFromString()
         allClearButton.setTitle("C", forState: .Normal)
-        functionButtonPressed = "yes"
-        clearFunctionPressed = "yes"
+        functionButtonPressed = true
+        clearFunctionPressed = true
     }
     
     
     @IBAction func equalsAction(sender: AnyObject) {
         storedValue2 = toDoubleFromString()
-        functionButtonPressed = "no"
-        equalsButtonPressed = "yes"
-        clearFunctionPressed = "no"
+        functionButtonPressed = false
+        equalsButtonPressed = true
+        clearFunctionPressed = false
         allClearButton.setTitle("AC", forState: .Normal)
         label.textColor = .whiteColor()
         switch whichFunction {
@@ -318,13 +268,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         storedValue1 = 0
         storedValue2 = 0
         
+        // Prevent app from crashing when equals button is pressed first
         if whichFunction == "" {
-            // Do nothing to avoid the app from crashing
+            // Do nothing
         } else {
             let indexPathToScrollTo = NSIndexPath(forRow: textArray.count - 1, inSection: 0)
             tableView.scrollToRowAtIndexPath(indexPathToScrollTo, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         }
 }
+    
+    // MARK: Table View Setup
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.textArray.count
@@ -349,7 +302,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.textLabel?.textColor = myBlueColor
+        cell?.textLabel?.textColor = .grayColor()
         var equationArray: [String] = split(textArray[indexPath.row]) {$0 == " "}
         if let finalValue = equationArray.last {
             label.text = finalValue
@@ -360,6 +313,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.textLabel?.textColor = .whiteColor()
     }
+    
+    // MARK: Menu Controller Setup
     
     @IBAction func pasteboardAction(sender: UILongPressGestureRecognizer) {
         if label.text != "" {
@@ -389,25 +344,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    // MARK: Animations
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-//        let cellText = cell?.textLabel?.text
-//        if let cellText = cellText {
-//            label.text = cellText
-//        }
-//    }
+    func labelShake(label: UILabel) {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.12
+        animation.repeatCount = 0
+        animation.autoreverses = true
+        animation.fromValue = NSValue(CGPoint: CGPointMake(label.center.x - 5, label.center.y))
+        animation.toValue = NSValue(CGPoint: CGPointMake(label.center.x + 5, label.center.y))
+        label.layer.addAnimation(animation, forKey: "position")
+    }
+    
+    // MARK: Memory Warning
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
-
-/*
-    Problems:
-              Fix problem with crashing when a huge number is operated on
-              Make animation for label size
-*/
-
