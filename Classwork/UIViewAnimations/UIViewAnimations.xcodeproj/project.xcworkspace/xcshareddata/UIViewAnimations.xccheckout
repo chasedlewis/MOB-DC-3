@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>54C72BC2-B86F-4949-9DDD-7FDD4BB75381</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>UIViewAnimations</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>
 		<string>https://github.com/chasedlewis/MOB-DC-3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Classwork/UIViewAnimations/UIViewAnimations.xcodeproj/project.xcworkspace</string>
+	<string>Classwork/UIViewAnimations/UIViewAnimations.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BFDAA4717EEB9965546778FF65FDEFE74CECE3C5</key>

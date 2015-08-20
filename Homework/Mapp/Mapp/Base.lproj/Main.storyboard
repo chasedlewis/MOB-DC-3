@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,74 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="XSt-nl-g9y">
-                                <rect key="frame" x="137" y="0.0" width="326" height="600"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First/Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uO2-x1-lS8">
-                                <rect key="frame" x="196" y="216" width="208" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="pQ5-hO-cLO"/>
-                                </constraints>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="thF-wB-ku2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-7Z-L2d">
+                                <rect key="frame" x="234" y="0.0" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfI-cc-ka3">
-                                <rect key="frame" x="196" y="285" width="209" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="gC9-7e-oDv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wil-SA-xC3">
-                                <rect key="frame" x="196" y="350" width="208" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Tgi-BQ-A1k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-BB-h9I">
-                                <rect key="frame" x="240" y="426" width="121" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Sign Up or Log In">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-WY-3Na">
-                                <rect key="frame" x="242" y="459" width="117" height="30"/>
-                                <state key="normal" title="Forgot Password">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uO2-x1-lS8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="196" id="0qi-rp-wKc"/>
-                            <constraint firstAttribute="centerX" secondItem="uO2-x1-lS8" secondAttribute="centerX" id="CG2-Xt-tjQ"/>
-                            <constraint firstAttribute="centerX" secondItem="wil-SA-xC3" secondAttribute="centerX" id="GyN-oG-j7O"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XSt-nl-g9y" secondAttribute="bottom" id="lkh-gs-1xV"/>
-                            <constraint firstItem="GfI-cc-ka3" firstAttribute="top" secondItem="uO2-x1-lS8" secondAttribute="bottom" constant="40" id="m1w-JH-6ig"/>
-                            <constraint firstAttribute="centerX" secondItem="GfI-cc-ka3" secondAttribute="centerX" id="nam-eY-PhT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XSt-nl-g9y" secondAttribute="trailing" id="pwk-gO-mYA"/>
-                            <constraint firstAttribute="centerX" secondItem="XSt-nl-g9y" secondAttribute="centerX" id="vyR-q2-77u"/>
-                            <constraint firstAttribute="centerX" secondItem="IwA-BB-h9I" secondAttribute="centerX" constant="-0.5" id="w4f-be-t05"/>
-                            <constraint firstItem="IwA-BB-h9I" firstAttribute="top" secondItem="wil-SA-xC3" secondAttribute="bottom" constant="40" id="wxn-Ar-eNx"/>
-                            <constraint firstItem="XSt-nl-g9y" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="z1c-yC-sDs"/>
-                            <constraint firstItem="wil-SA-xC3" firstAttribute="top" secondItem="GfI-cc-ka3" secondAttribute="bottom" constant="40" id="zSX-76-fqX"/>
+                            <constraint firstAttribute="centerX" secondItem="thF-wB-ku2" secondAttribute="centerX" constant="-16" id="OID-yc-B51"/>
+                            <constraint firstAttribute="centerY" secondItem="thF-wB-ku2" secondAttribute="centerY" constant="8" id="S6a-IT-XQs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="pwk-gO-mYA"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="MapBackground.png" width="326" height="583"/>
-    </resources>
 </document>

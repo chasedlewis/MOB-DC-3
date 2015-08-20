@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var labelXConstraint: NSLayoutConstraint!
 
 
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: CalcLabel!
     @IBOutlet weak var allClearButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,26 +25,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var signButtonPressed: String = ""
     var equalsButtonPressed: String = ""
     var clearFunctionPressed: String = ""
+    var zeroButtonPressed: Bool = false
     let cellID = "historyCell"
     var textArray = [String]()
+    var myBlueColor: UIColor = UIColor(red: (72/255.0), green: (206/255.0), blue: (192/255.0), alpha: 1.0)
+    let unitedStatesLocale = NSLocale(localeIdentifier: "en_US")
+    let numberFormatter = NSNumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.backgroundColor = .blackColor()
+        
+        let longPressGR = UILongPressGestureRecognizer()
+        longPressGR.addTarget(self, action: "textPressed:")
+        label.addGestureRecognizer(longPressGR)
+        
+        numberFormatter.numberStyle = .DecimalStyle
+        numberFormatter.locale = unitedStatesLocale
+        numberFormatter.maximumFractionDigits = 15
     }
     
     func toDoubleFromString() -> Double {
         let currentValue = label.text! as NSString
-        var number = currentValue.doubleValue
+        var valueWithoutCommas = currentValue.stringByReplacingOccurrencesOfString(",", withString: "") as NSString
+        var number = valueWithoutCommas.doubleValue
         return number
     }
     
     func toStringToDisplay(doubleNumber:Double) {
         if doubleNumber % 1 == 0 {
             let newNumber = Int(doubleNumber)
-            label.text = String(newNumber)
+            label.text = numberFormatter.stringFromNumber(newNumber)!
         } else {
-            label.text = "\(doubleNumber)"
+            label.text = "\(numberFormatter.stringFromNumber(doubleNumber)!)"
         }
     }
     
@@ -52,6 +67,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             label.text = "\(buttonNumber)"
         } else {
             label.text! += "\(buttonNumber)"
+            var currentTextDouble = toDoubleFromString()
+            if (label.text?.rangeOfString(".") != nil) && (zeroButtonPressed == true) {
+//                numberFormatter.minimumFractionDigits = 1
+//                var updatedTextString = numberFormatter.stringFromNumber(currentTextDouble)
+//                numberFormatter.minimumFractionDigits = 0
+//                label.text = updatedTextString!
+            } else {
+                var updatedTextString = numberFormatter.stringFromNumber(currentTextDouble)
+                label.text = updatedTextString!
+            }
         }
     }
     
@@ -65,6 +90,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func allClearAction(sender: AnyObject) {
+        label.textColor = .whiteColor()
         switch clearFunctionPressed {
             case "yes":
                 storedValue2 = 0
@@ -93,63 +119,114 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func zeroAction(sender: AnyObject) {
-        displayNumber("0")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        zeroButtonPressed = true
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("0")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func oneAction(sender: AnyObject) {
-        displayNumber("1")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("1")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
    
     @IBAction func twoAction(sender: AnyObject) {
-        displayNumber("2")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("2")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func threeAction(sender: AnyObject) {
-        displayNumber("3")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+           label.textColor = .grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("3")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func fourAction(sender: AnyObject) {
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
         displayNumber("4")
         equalsButtonPressed = "no"
         functionButtonPressed = "no"
+        }
     }
     
     @IBAction func fiveAction(sender: AnyObject) {
-        displayNumber("5")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("5")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func sixAction(sender: AnyObject) {
-        displayNumber("6")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("6")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func sevenAction(sender: AnyObject) {
-        displayNumber("7")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("7")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func eightAction(sender: AnyObject) {
-        displayNumber("8")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("8")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func nineAction(sender: AnyObject) {
-        displayNumber("9")
-        equalsButtonPressed = "no"
-        functionButtonPressed = "no"
+        if count(label.text!) > 11 && functionButtonPressed == "no" {
+            label.textColor = UIColor.grayColor()
+        } else {
+            label.textColor = UIColor.whiteColor()
+            displayNumber("9")
+            equalsButtonPressed = "no"
+            functionButtonPressed = "no"
+        }
     }
     
     @IBAction func decimalAction(sender: AnyObject) {
@@ -203,6 +280,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         equalsButtonPressed = "yes"
         clearFunctionPressed = "no"
         allClearButton.setTitle("AC", forState: .Normal)
+        label.textColor = .whiteColor()
         switch whichFunction {
             case "addition":
                 finalValue = storedValue1 + storedValue2
@@ -210,29 +288,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let tableValue1 = prepareForTableView(storedValue1)
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
-                textArray.append("\(tableValue1) + \(tableValue2) = \(tableFinal)")
+                textArray.append("\(numberFormatter.stringFromNumber(storedValue1)!) + \(numberFormatter.stringFromNumber(storedValue2)!) = \(numberFormatter.stringFromNumber(finalValue)!)")
             case "subtraction":
                 finalValue = storedValue1 - storedValue2
                 toStringToDisplay(finalValue)
                 let tableValue1 = prepareForTableView(storedValue1)
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
-                textArray.append("\(tableValue1) - \(tableValue2) = \(tableFinal)")
+                textArray.append("\(numberFormatter.stringFromNumber(storedValue1)!) - \(numberFormatter.stringFromNumber(storedValue2)!) = \(numberFormatter.stringFromNumber(finalValue)!)")
             case "multiplication":
                 finalValue = storedValue1 * storedValue2
                 toStringToDisplay(finalValue)
                 let tableValue1 = prepareForTableView(storedValue1)
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
-                textArray.append("\(tableValue1) x \(tableValue2) = \(tableFinal)")
+                textArray.append("\(numberFormatter.stringFromNumber(storedValue1)!) x \(numberFormatter.stringFromNumber(storedValue2)!) = \(numberFormatter.stringFromNumber(finalValue)!)")
             case "division":
                 finalValue = storedValue1 / storedValue2
                 toStringToDisplay(finalValue)
                 let tableValue1 = prepareForTableView(storedValue1)
                 let tableValue2 = prepareForTableView(storedValue2)
                 let tableFinal = prepareForTableView(finalValue)
-                textArray.append("\(tableValue1) ÷ \(tableValue2) = \(tableFinal)")
-            
+                textArray.append("\(numberFormatter.stringFromNumber(storedValue1)!) ÷ \(numberFormatter.stringFromNumber(storedValue2)!) = \(numberFormatter.stringFromNumber(finalValue)!)")
             default:
                 println("default")
         }
@@ -258,6 +335,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.textArray[indexPath.row]
         cell.backgroundColor = UIColor.blackColor()
+        cell.selectionStyle = .None
         cell.textLabel?.font = UIFont(name: "Helvetica-light", size: 20.0)
         return cell
     }
@@ -270,9 +348,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("HERE")
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        println(cell?.textLabel?.text)
+        cell?.textLabel?.textColor = myBlueColor
+        var equationArray: [String] = split(textArray[indexPath.row]) {$0 == " "}
+        if let finalValue = equationArray.last {
+            label.text = finalValue
+        }
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.textLabel?.textColor = .whiteColor()
+    }
+    
+    @IBAction func pasteboardAction(sender: UILongPressGestureRecognizer) {
+        if label.text != "" {
+            textPressed(sender)
+        }
+    }
+    
+    func textPressed(recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == UIGestureRecognizerState.Began {
+ 
+            let location = recognizer.locationInView(recognizer.view)
+            let menu = UIMenuController.sharedMenuController()
+            let itemCopy = UIMenuItem(title: "Copy", action: "copyLabelText")
+            let items = [itemCopy]
+            assert(label.becomeFirstResponder(), "label is not FR")
+            menu.menuItems = items
+            menu.setTargetRect(CGRectMake(location.x, location.y, 0.0, 0.0), inView: label)
+            menu.setMenuVisible(true, animated: true)
+            
+        }
+    }
+    
+    func copyLabelText() {
+        var pasteBoard = UIPasteboard.generalPasteboard()
+        if let text = label.text {
+            pasteBoard.string = text
+        }
     }
     
     
@@ -291,9 +405,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 }
 
-/* Add the ability to select one of the equations from the table view and then the result of that equation will take the place of the latest solution on the screen so it can then be used again in a new function. Also, add commas in the numbers to make them more readable. And add pasteboards
-
-    Problems: Need to limit the amount of numbers that can be entered because if not it will be input as "44444444444444444..." on the label and then the math functions won't work
-    Problem: App crashes when equals button is the first button pressed when opening the app
+/*
+    Problems:
+              Fix problem with crashing when a huge number is operated on
+              Make animation for label size
 */
 

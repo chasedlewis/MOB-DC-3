@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="AC">
-                                    <color key="titleColor" white="0.84012643909999996" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="allClearAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1mC-BN-L0R"/>
@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="-/+">
-                                    <color key="titleColor" white="0.84012643909999996" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="%">
-                                    <color key="titleColor" white="0.84012643909999996" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -57,7 +57,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="÷">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -105,7 +105,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="×">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -153,7 +153,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="-">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -201,7 +201,7 @@
                                 <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -242,24 +242,24 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-fm-2ad">
                                 <rect key="frame" x="451" y="515" width="149" height="85"/>
-                                <color key="backgroundColor" white="0.16328900425057666" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="=">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.47450980392156861" green="0.7686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="equalsAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EAk-f4-JsI"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DWE-sp-Gi8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DWE-sp-Gi8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="historyCell" textLabel="LQ4-26-4Na" style="IBUITableViewCellStyleDefault" id="2zN-qT-tqp" customClass="cellID">
+                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="historyCell" textLabel="LQ4-26-4Na" style="IBUITableViewCellStyleDefault" id="2zN-qT-tqp">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2zN-qT-tqp" id="spV-Sb-bev">
@@ -267,9 +267,13 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LQ4-26-4Na">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="cZf-HE-hLt" appends="YES" id="zuj-DE-v4X"/>
+                                                    </connections>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -282,14 +286,18 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="sUM-cR-HA1"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="q65-wp-ev9">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="q65-wp-ev9" customClass="CalcLabel" customModule="GAMidtermCalculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="96" width="600" height="67"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="Zct-Oa-hdo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="64"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cZf-HE-hLt" appends="YES" id="5Uf-yo-VL8"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -375,7 +383,7 @@
                             <constraint firstItem="tgd-ll-ZPn" firstAttribute="width" secondItem="i2S-B2-L9h" secondAttribute="width" id="s1p-5h-nEp"/>
                             <constraint firstItem="tgd-ll-ZPn" firstAttribute="width" secondItem="v3s-ZA-jaH" secondAttribute="width" id="sG8-z9-4bg"/>
                             <constraint firstItem="tgd-ll-ZPn" firstAttribute="height" secondItem="6PW-Lt-4y3" secondAttribute="height" id="sbo-vO-pHi"/>
-                            <constraint firstItem="q65-wp-ev9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="16" id="txr-hS-D7i"/>
+                            <constraint firstItem="q65-wp-ev9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="txr-hS-D7i"/>
                             <constraint firstItem="nNo-8X-efZ" firstAttribute="leading" secondItem="tgd-ll-ZPn" secondAttribute="trailing" constant="1" id="vMW-mJ-Iqp"/>
                             <constraint firstItem="lX4-wp-B5t" firstAttribute="leading" secondItem="4N1-pY-WGf" secondAttribute="leading" constant="-7" id="vYI-QT-7aW"/>
                             <constraint firstItem="NYI-ca-qgY" firstAttribute="top" secondItem="SaR-TT-MVY" secondAttribute="top" id="xO9-A4-Ds9"/>
@@ -395,10 +403,16 @@
                     <connections>
                         <outlet property="allClearButton" destination="tgd-ll-ZPn" id="M4F-Sb-ece"/>
                         <outlet property="label" destination="q65-wp-ev9" id="8ZF-Jv-lcq"/>
+                        <outlet property="labelXConstraint" destination="txr-hS-D7i" id="MhK-Gz-NzJ"/>
                         <outlet property="tableView" destination="DWE-sp-Gi8" id="mcs-37-b3m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cZf-HE-hLt">
+                    <connections>
+                        <action selector="pasteboardAction:" destination="vXZ-lx-hvc" id="dCn-cG-CjD"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="245" y="350"/>
         </scene>
